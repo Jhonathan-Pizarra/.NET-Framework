@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a576de0f68d64cd2818791b69ec7c541" Name="Diagram1">
+        <EntityTypeShape EntityType="StayHubModel.cabecera_reserva" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="StayHubModel.cliente" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StayHubModel.detalle_reserva" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StayHubModel.empleado" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StayHubModel.habitacion" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StayHubModel.usuario" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="StayHubModel.FK_cabecera_reserva_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="StayHubModel.FK_cabecera_reserva_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="StayHubModel.FK_detalle_reserva_cabecera_reserva1" ManuallyRouted="false" />
+        <AssociationConnector Association="StayHubModel.FK_detalle_reserva_habitacion" ManuallyRouted="false" />
+        <AssociationConnector Association="StayHubModel.FK_usuario_empleado" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -9,6 +9,7 @@
 
 namespace Infra.DataAccess
 {
+    using Dominio.Model.Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;

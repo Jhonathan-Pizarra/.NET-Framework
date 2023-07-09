@@ -41,12 +41,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\cabecera_reserva.cs">
+      <DependentUpon>ModelAlquiler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\cliente.cs">
+      <DependentUpon>ModelAlquiler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\detalle_reserva.cs">
+      <DependentUpon>ModelAlquiler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\empleado.cs">
+      <DependentUpon>ModelAlquiler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\habitacion.cs">
+      <DependentUpon>ModelAlquiler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ModelAlquiler.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAlquiler.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\usuario.cs">
+      <DependentUpon>ModelAlquiler.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
-    <Folder Include="Entities\" />
     <Folder Include="ObjectValues\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\ModelAlquiler.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelAlquiler.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

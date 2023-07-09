@@ -50,30 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cabecera_reserva.cs">
-      <DependentUpon>ModelAlquiler.tt</DependentUpon>
-    </Compile>
-    <Compile Include="cliente.cs">
-      <DependentUpon>ModelAlquiler.tt</DependentUpon>
-    </Compile>
-    <Compile Include="detalle_reserva.cs">
-      <DependentUpon>ModelAlquiler.tt</DependentUpon>
-    </Compile>
-    <Compile Include="empleado.cs">
-      <DependentUpon>ModelAlquiler.tt</DependentUpon>
-    </Compile>
-    <Compile Include="habitacion.cs">
-      <DependentUpon>ModelAlquiler.tt</DependentUpon>
-    </Compile>
     <Compile Include="ModelAlquiler.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAlquiler.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelAlquiler.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAlquiler.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelAlquiler.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -81,9 +61,6 @@
       <DependentUpon>ModelAlquiler.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="usuario.cs">
-      <DependentUpon>ModelAlquiler.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />
@@ -116,11 +93,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelAlquiler.Context.cs</LastGenOutput>
       <DependentUpon>ModelAlquiler.edmx</DependentUpon>
-    </Content>
-    <Content Include="ModelAlquiler.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelAlquiler.edmx</DependentUpon>
-      <LastGenOutput>ModelAlquiler.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Infra.DataAccess
+namespace Dominio.Model.Entities
 {
     using System;
     using System.Collections.Generic;

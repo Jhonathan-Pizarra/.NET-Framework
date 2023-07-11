@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StayHubModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cabecera_reserva">
+    <Key>
+      <PropertyRef Name="id_reserva" />
+    </Key>
+    <Property Name="id_reserva" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_cliente" Type="int" />
+    <Property Name="id_usuario" Type="int" />
+    <Property Name="fecha_reserva" Type="datetime" />
+    <Property Name="fecha_entrada" Type="datetime" />
+    <Property Name="fecha_salida" Type="datetime" />
+    <Property Name="estado_reserva" Type="int" />
+    <Property Name="observaciones" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identificacion_cliente" Type="varchar" MaxLength="50" />
+    <Property Name="nombre_cliente" Type="varchar" MaxLength="50" />
+    <Property Name="apellido_cliente" Type="varchar" MaxLength="50" />
+    <Property Name="direccion_cliente" Type="varchar" MaxLength="100" />
+    <Property Name="telefono_cliente" Type="int" />
+    <Property Name="email_cliente" Type="varchar" MaxLength="50" />
+    <Property Name="estado_cliente" Type="int" />
+  </EntityType>
+  <EntityType Name="detalle_reserva">
+    <Key>
+      <PropertyRef Name="id_detalle" />
+    </Key>
+    <Property Name="id_detalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_reserva" Type="int" />
+    <Property Name="id_habitacion" Type="int" />
+    <Property Name="cantidad_personas" Type="int" />
+    <Property Name="cantidad_dias" Type="int" />
+    <Property Name="observaciones" Type="varchar" MaxLength="200" />
+    <Property Name="estado" Type="int" />
+  </EntityType>
+  <EntityType Name="empleado">
+    <Key>
+      <PropertyRef Name="id_empleado" />
+    </Key>
+    <Property Name="id_empleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_empleado" Type="varchar" MaxLength="50" />
+    <Property Name="apellido_empleado" Type="varchar" MaxLength="50" />
+    <Property Name="direccion_empleado" Type="varchar" MaxLength="100" />
+    <Property Name="telefono_empleado" Type="int" />
+    <Property Name="email_empleado" Type="varchar" MaxLength="50" />
+    <Property Name="observaciones_empleado" Type="varchar" MaxLength="200" />
+    <Property Name="estado_empleado" Type="int" />
+  </EntityType>
+  <EntityType Name="habitacion">
+    <Key>
+      <PropertyRef Name="id_habitacion" />
+    </Key>
+    <Property Name="id_habitacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numero_habitacion" Type="int" />
+    <Property Name="piso_habitacion" Type="int" />
+    <Property Name="preciodiario_habitacion" Type="float" />
+    <Property Name="tipo_habitacion" Type="varchar" MaxLength="100" />
+    <Property Name="caracteristicas_habitacion" Type="varchar" MaxLength="200" />
+    <Property Name="estado_habitacion" Type="int" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_empleado" Type="int" />
+    <Property Name="usuario1" Type="varchar" MaxLength="50" />
+    <Property Name="contraseña" Type="varchar" MaxLength="50" />
+    <Property Name="estado" Type="int" />
+  </EntityType>
+  <Association Name="FK_cabecera_reserva_cliente">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+    <End Role="cabecera_reserva" Type="Self.cabecera_reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="cabecera_reserva">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_cabecera_reserva_usuario">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+    <End Role="cabecera_reserva" Type="Self.cabecera_reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="cabecera_reserva">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalle_reserva_cabecera_reserva1">
+    <End Role="cabecera_reserva" Type="Self.cabecera_reserva" Multiplicity="0..1" />
+    <End Role="detalle_reserva" Type="Self.detalle_reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cabecera_reserva">
+        <PropertyRef Name="id_reserva" />
+      </Principal>
+      <Dependent Role="detalle_reserva">
+        <PropertyRef Name="id_reserva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detalle_reserva_habitacion">
+    <End Role="habitacion" Type="Self.habitacion" Multiplicity="0..1" />
+    <End Role="detalle_reserva" Type="Self.detalle_reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="habitacion">
+        <PropertyRef Name="id_habitacion" />
+      </Principal>
+      <Dependent Role="detalle_reserva">
+        <PropertyRef Name="id_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuario_empleado">
+    <End Role="empleado" Type="Self.empleado" Multiplicity="0..1" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empleado">
+        <PropertyRef Name="id_empleado" />
+      </Principal>
+      <Dependent Role="usuario">
+        <PropertyRef Name="id_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StayHubModelStoreContainer">
+    <EntitySet Name="cabecera_reserva" EntityType="Self.cabecera_reserva" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detalle_reserva" EntityType="Self.detalle_reserva" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="empleado" EntityType="Self.empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="habitacion" EntityType="Self.habitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_cabecera_reserva_cliente" Association="Self.FK_cabecera_reserva_cliente">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="cabecera_reserva" EntitySet="cabecera_reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_cabecera_reserva_usuario" Association="Self.FK_cabecera_reserva_usuario">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="cabecera_reserva" EntitySet="cabecera_reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalle_reserva_cabecera_reserva1" Association="Self.FK_detalle_reserva_cabecera_reserva1">
+      <End Role="cabecera_reserva" EntitySet="cabecera_reserva" />
+      <End Role="detalle_reserva" EntitySet="detalle_reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detalle_reserva_habitacion" Association="Self.FK_detalle_reserva_habitacion">
+      <End Role="habitacion" EntitySet="habitacion" />
+      <End Role="detalle_reserva" EntitySet="detalle_reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuario_empleado" Association="Self.FK_usuario_empleado">
+      <End Role="empleado" EntitySet="empleado" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

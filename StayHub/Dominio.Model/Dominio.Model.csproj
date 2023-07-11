@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\IBaseRepository.cs" />
+    <Compile Include="Abstractions\ICabeceraReservaRepository.cs" />
+    <Compile Include="Abstractions\IClienteRepository.cs" />
+    <Compile Include="Abstractions\IDetalleReservaRepository.cs" />
+    <Compile Include="Abstractions\IEmpleadoRepository.cs" />
+    <Compile Include="Abstractions\IHabitacionRepository.cs" />
+    <Compile Include="Abstractions\IUsuarioRepository.cs" />
     <Compile Include="Entities\cabecera_reserva.cs">
       <DependentUpon>ModelAlquiler.tt</DependentUpon>
     </Compile>
@@ -67,7 +74,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstractions\" />
     <Folder Include="ObjectValues\" />
   </ItemGroup>
   <ItemGroup>

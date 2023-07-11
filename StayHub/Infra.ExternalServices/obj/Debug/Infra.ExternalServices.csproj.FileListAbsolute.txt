@@ -1,0 +1,6 @@
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.ExternalServices\bin\Debug\Infra.ExternalServices.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.ExternalServices\bin\Debug\Infra.ExternalServices.pdb
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.ExternalServices\obj\Debug\Infra.ExternalServices.csproj.AssemblyReference.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.ExternalServices\obj\Debug\Infra.ExternalServices.csproj.CoreCompileInputs.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.ExternalServices\obj\Debug\Infra.ExternalServices.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.ExternalServices\obj\Debug\Infra.ExternalServices.pdb

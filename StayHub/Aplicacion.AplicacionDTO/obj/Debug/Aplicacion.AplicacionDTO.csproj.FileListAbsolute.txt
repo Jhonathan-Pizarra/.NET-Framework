@@ -1,0 +1,6 @@
+C:\Users\Jhona\Desktop\ISProject\StayHub\Aplicacion.AplicacionDTO\bin\Debug\Aplicacion.AplicacionDTO.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Aplicacion.AplicacionDTO\bin\Debug\Aplicacion.AplicacionDTO.pdb
+C:\Users\Jhona\Desktop\ISProject\StayHub\Aplicacion.AplicacionDTO\obj\Debug\Aplicacion.AplicacionDTO.csproj.AssemblyReference.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Aplicacion.AplicacionDTO\obj\Debug\Aplicacion.AplicacionDTO.csproj.CoreCompileInputs.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Aplicacion.AplicacionDTO\obj\Debug\Aplicacion.AplicacionDTO.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Aplicacion.AplicacionDTO\obj\Debug\Aplicacion.AplicacionDTO.pdb

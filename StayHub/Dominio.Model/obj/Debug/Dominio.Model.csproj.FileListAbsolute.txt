@@ -1,0 +1,6 @@
+C:\Users\Jhona\Desktop\ISProject\StayHub\Dominio.Model\bin\Debug\Dominio.Model.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Dominio.Model\bin\Debug\Dominio.Model.pdb
+C:\Users\Jhona\Desktop\ISProject\StayHub\Dominio.Model\obj\Debug\Dominio.Model.csproj.AssemblyReference.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Dominio.Model\obj\Debug\Dominio.Model.csproj.CoreCompileInputs.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Dominio.Model\obj\Debug\Dominio.Model.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Dominio.Model\obj\Debug\Dominio.Model.pdb

@@ -1,0 +1,6 @@
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.EmailService\bin\Debug\Infra.EmailService.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.EmailService\bin\Debug\Infra.EmailService.pdb
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.EmailService\obj\Debug\Infra.EmailService.csproj.AssemblyReference.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.EmailService\obj\Debug\Infra.EmailService.csproj.CoreCompileInputs.cache
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.EmailService\obj\Debug\Infra.EmailService.dll
+C:\Users\Jhona\Desktop\ISProject\StayHub\Infra.EmailService\obj\Debug\Infra.EmailService.pdb

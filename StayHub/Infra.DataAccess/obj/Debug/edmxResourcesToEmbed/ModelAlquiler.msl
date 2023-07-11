@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StayHubModelStoreContainer" CdmEntityContainer="StayHubEntities">
+    <EntitySetMapping Name="cabecera_reserva">
+      <EntityTypeMapping TypeName="StayHubModel.cabecera_reserva">
+        <MappingFragment StoreEntitySet="cabecera_reserva">
+          <ScalarProperty Name="id_reserva" ColumnName="id_reserva" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="fecha_reserva" ColumnName="fecha_reserva" />
+          <ScalarProperty Name="fecha_entrada" ColumnName="fecha_entrada" />
+          <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
+          <ScalarProperty Name="estado_reserva" ColumnName="estado_reserva" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cliente">
+      <EntityTypeMapping TypeName="StayHubModel.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="identificacion_cliente" ColumnName="identificacion_cliente" />
+          <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
+          <ScalarProperty Name="apellido_cliente" ColumnName="apellido_cliente" />
+          <ScalarProperty Name="direccion_cliente" ColumnName="direccion_cliente" />
+          <ScalarProperty Name="telefono_cliente" ColumnName="telefono_cliente" />
+          <ScalarProperty Name="email_cliente" ColumnName="email_cliente" />
+          <ScalarProperty Name="estado_cliente" ColumnName="estado_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detalle_reserva">
+      <EntityTypeMapping TypeName="StayHubModel.detalle_reserva">
+        <MappingFragment StoreEntitySet="detalle_reserva">
+          <ScalarProperty Name="id_detalle" ColumnName="id_detalle" />
+          <ScalarProperty Name="id_reserva" ColumnName="id_reserva" />
+          <ScalarProperty Name="id_habitacion" ColumnName="id_habitacion" />
+          <ScalarProperty Name="cantidad_personas" ColumnName="cantidad_personas" />
+          <ScalarProperty Name="cantidad_dias" ColumnName="cantidad_dias" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empleado">
+      <EntityTypeMapping TypeName="StayHubModel.empleado">
+        <MappingFragment StoreEntitySet="empleado">
+          <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
+          <ScalarProperty Name="nombre_empleado" ColumnName="nombre_empleado" />
+          <ScalarProperty Name="apellido_empleado" ColumnName="apellido_empleado" />
+          <ScalarProperty Name="direccion_empleado" ColumnName="direccion_empleado" />
+          <ScalarProperty Name="telefono_empleado" ColumnName="telefono_empleado" />
+          <ScalarProperty Name="email_empleado" ColumnName="email_empleado" />
+          <ScalarProperty Name="observaciones_empleado" ColumnName="observaciones_empleado" />
+          <ScalarProperty Name="estado_empleado" ColumnName="estado_empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="habitacion">
+      <EntityTypeMapping TypeName="StayHubModel.habitacion">
+        <MappingFragment StoreEntitySet="habitacion">
+          <ScalarProperty Name="id_habitacion" ColumnName="id_habitacion" />
+          <ScalarProperty Name="numero_habitacion" ColumnName="numero_habitacion" />
+          <ScalarProperty Name="piso_habitacion" ColumnName="piso_habitacion" />
+          <ScalarProperty Name="preciodiario_habitacion" ColumnName="preciodiario_habitacion" />
+          <ScalarProperty Name="tipo_habitacion" ColumnName="tipo_habitacion" />
+          <ScalarProperty Name="caracteristicas_habitacion" ColumnName="caracteristicas_habitacion" />
+          <ScalarProperty Name="estado_habitacion" ColumnName="estado_habitacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="StayHubModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario1" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

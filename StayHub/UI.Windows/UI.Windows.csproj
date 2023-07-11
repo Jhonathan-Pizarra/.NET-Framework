@@ -62,11 +62,41 @@
     <Compile Include="AplicationController\EmpleadoController.cs" />
     <Compile Include="AplicationController\HabitacionController.cs" />
     <Compile Include="AplicationController\UsuarioController.cs" />
-    <Compile Include="Form\FrmEmpleado.cs">
+    <Compile Include="Forms\FrmCabeceraReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmEmpleado.Designer.cs">
+    <Compile Include="Forms\FrmCabeceraReserva.Designer.cs">
+      <DependentUpon>FrmCabeceraReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetalleReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDetalleReserva.Designer.cs">
+      <DependentUpon>FrmDetalleReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEmpleado.Designer.cs">
       <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHabitacion.Designer.cs">
+      <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +106,23 @@
     <Compile Include="ViewModel\EmpleadoViewModel.cs" />
     <Compile Include="ViewModel\HabitacionViewModel.cs" />
     <Compile Include="ViewModel\UsuarioViewModel.cs" />
-    <EmbeddedResource Include="Form\FrmEmpleado.resx">
+    <EmbeddedResource Include="Forms\FrmCabeceraReserva.resx">
+      <DependentUpon>FrmCabeceraReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDetalleReserva.resx">
+      <DependentUpon>FrmDetalleReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHabitacion.resx">
+      <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

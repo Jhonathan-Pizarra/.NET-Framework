@@ -12,7 +12,7 @@ using UI.Windows.ViewModel;
 
 namespace UI.Windows
 {
-    public partial class FrmEmpleado : Form
+    public partial class FrmEmpleado : System.Windows.Forms.Form
     {
         //
         private EmpleadoController controllerEmpleado;

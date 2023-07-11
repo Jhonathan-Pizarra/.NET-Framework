@@ -25,3 +25,8 @@ C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.exe
 C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.pdb
 C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmCliente.resources
+C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmHabitacion.resources
+C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmUsuario.resources
+C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmCabeceraReserva.resources
+C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmDetalleReserva.resources

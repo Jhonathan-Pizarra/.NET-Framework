@@ -9,5 +9,6 @@ namespace Dominio.Model.Abstractions
 {
     public interface IEmpleadoRepository: IBaseRepository<empleado>
     {
+        IEnumerable<empleado> GetAllActivos();
     }
 }

@@ -40,5 +40,12 @@ namespace Aplicacion.Aplicacion.Services
             empleadoHub.Delete(id);
         }
 
+        //Personalziados
+        public IEnumerable<empleado> GetAllActivos()
+        {
+            //retorna solo los activos
+            return empleadoHub.GetAllActivos();
+        }
+
     }
 }

@@ -46,6 +46,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
+            this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -196,11 +198,22 @@
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
+            // dgvListaEmpleados
+            // 
+            this.dgvListaEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaEmpleados.Location = new System.Drawing.Point(91, 536);
+            this.dgvListaEmpleados.Name = "dgvListaEmpleados";
+            this.dgvListaEmpleados.RowHeadersWidth = 51;
+            this.dgvListaEmpleados.RowTemplate.Height = 24;
+            this.dgvListaEmpleados.Size = new System.Drawing.Size(605, 150);
+            this.dgvListaEmpleados.TabIndex = 18;
+            // 
             // FrmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.ClientSize = new System.Drawing.Size(800, 745);
+            this.Controls.Add(this.dgvListaEmpleados);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtID);
@@ -221,6 +234,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmEmpleado";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmEmpleado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,6 +261,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.DataGridView dgvListaEmpleados;
     }
 }
 

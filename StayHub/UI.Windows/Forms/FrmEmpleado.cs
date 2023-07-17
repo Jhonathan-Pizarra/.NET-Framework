@@ -63,6 +63,14 @@ namespace UI.Windows
             txtObservaciones.Text = "";
         }
 
+        private void ListarActivos()
+        {
+            //Listar Activos
+            dgvListaEmpleados.DataSource = controllerEmpleado.ListarEmpleadosActivos();
+            //Listar todos
+            dgvListaEmpleados.DataSource = controllerEmpleado.ListarEmpleados();
+        }
+
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             viewModelEmpleado = new EmpleadoViewModel();
@@ -85,9 +93,14 @@ namespace UI.Windows
                 Insertar();
                 Limpiar();
             }
+            ListarActivos();
 
 
+        }
 
+        private void FrmEmpleado_Load(object sender, EventArgs e)
+        {
+            ListarActivos();
         }
     }
 }

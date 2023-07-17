@@ -95,5 +95,38 @@ namespace UI.Windows.AplicationController
             }
            
         }
+
+
+        //Enlistar Activos
+        public IEnumerable<EmpleadoViewModel> ListarEmpleadosActivos()
+        {
+            var listaEmpleado = servicioEmpleado.GetAllActivos(); //var almacena una lista, un bool, cualqueri cosa. Luego consume el servicio de GetEmpleados()
+            List<EmpleadoViewModel> resultado = new List<EmpleadoViewModel>(); //Transformar para enviar la información al formulario
+            try
+            {
+                foreach (empleado item in listaEmpleado)
+                {
+                    resultado.Add(new EmpleadoViewModel
+                    {
+                        Id_empleado = item.id_empleado,
+                        Nombre_empleado = item.nombre_empleado,
+                        Apellido_empleado = item.apellido_empleado,
+                        Telefono_empleado = item.telefono_empleado,
+                        Email_empleado = item.email_empleado,
+                        Observaciones_empleado = item.observaciones_empleado,
+                        Estado_empleado = item.estado_empleado
+                    });
+                }
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al traer registros activos: " + ex.Message);
+            }
+
+        }
+
+
     }
 }

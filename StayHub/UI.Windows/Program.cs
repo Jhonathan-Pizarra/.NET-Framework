@@ -17,12 +17,12 @@ namespace UI.Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmEmpleado());
+            Application.Run(new FrmEmpleado());
             //Application.Run(new FrmCliente());
             //Application.Run(new FrmHabitacion());
             //Application.Run(new FrmUsuario());
             //Application.Run(new FrmCabeceraReserva());
-            Application.Run(new FrmDetalleReserva());
+            //Application.Run(new FrmDetalleReserva());
 
         }
     }

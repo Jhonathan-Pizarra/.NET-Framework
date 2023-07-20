@@ -31,7 +31,6 @@
             this.btnInsertar = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -46,11 +45,14 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(598, 406);
+            this.btnInsertar.Location = new System.Drawing.Point(568, 412);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(105, 46);
             this.btnInsertar.TabIndex = 35;
@@ -74,13 +76,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(29, 22);
             this.txtID.TabIndex = 33;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(205, 406);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(44, 22);
-            this.txtEstado.TabIndex = 32;
             // 
             // txtDNI
             // 
@@ -196,15 +191,36 @@
             this.lblTitulo.TabIndex = 18;
             this.lblTitulo.Text = "REGISTRO DE CLIENTES";
             // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Location = new System.Drawing.Point(205, 408);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(94, 20);
+            this.chkEstado.TabIndex = 36;
+            this.chkEstado.Text = "Disponible";
+            this.chkEstado.UseVisualStyleBackColor = true;
+            // 
+            // dgvClientes
+            // 
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(98, 550);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.RowHeadersWidth = 51;
+            this.dgvClientes.RowTemplate.Height = 24;
+            this.dgvClientes.Size = new System.Drawing.Size(605, 216);
+            this.dgvClientes.TabIndex = 37;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 528);
+            this.ClientSize = new System.Drawing.Size(800, 829);
+            this.Controls.Add(this.dgvClientes);
+            this.Controls.Add(this.chkEstado);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTelefono);
@@ -221,6 +237,8 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +249,6 @@
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtTelefono;
@@ -246,5 +263,7 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.CheckBox chkEstado;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }

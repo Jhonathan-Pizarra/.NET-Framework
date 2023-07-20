@@ -59,7 +59,8 @@ namespace UI.Windows
             txtTelefono.Text = "";
             txtEmail.Text = "";
             txtDireccion.Text = "";
-            txtEstado.Text = "";
+            chkEstado.Checked = false;
+            //txtEstado.Text = "";
             txtObservaciones.Text = "";
         }
 
@@ -80,7 +81,7 @@ namespace UI.Windows
             viewModelEmpleado.Telefono_empleado = int.Parse(txtTelefono.Text); 
             viewModelEmpleado.Email_empleado = txtEmail.Text;
             viewModelEmpleado.Observaciones_empleado = txtObservaciones.Text;   
-            viewModelEmpleado.Estado_empleado = int.Parse(txtEstado.Text);
+            viewModelEmpleado.Estado_empleado = chkEstado.Checked ? 1 : 0;
 
             //if para cualquier cosa que necesite controlar
             if (txtID.Text != "")
@@ -101,6 +102,29 @@ namespace UI.Windows
         private void FrmEmpleado_Load(object sender, EventArgs e)
         {
             ListarActivos();
+        }
+
+        private void dgvListaEmpleados_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //Si selecciona una celda y esta no está vacia
+            if (dgvListaEmpleados.SelectedRows.Count > 0)
+            {
+                //Carga en el input la información del empleado seleccionado:
+                txtID.Text = dgvListaEmpleados.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = dgvListaEmpleados.CurrentRow.Cells[1].Value.ToString();
+                txtApellido.Text = dgvListaEmpleados.CurrentRow.Cells[2].Value.ToString();
+                txtDireccion.Text = dgvListaEmpleados.CurrentRow.Cells[3].Value.ToString();
+                txtTelefono.Text = dgvListaEmpleados.CurrentRow.Cells[4].Value.ToString();
+                txtEmail.Text = dgvListaEmpleados.CurrentRow.Cells[5].Value.ToString();
+                txtObservaciones.Text = dgvListaEmpleados.CurrentRow.Cells[6].Value.ToString();
+
+                if (dgvListaEmpleados.CurrentRow.Cells[7].Value.ToString() == "1")
+                {
+                    chkEstado.Checked = true;
+                }
+
+
+            }
         }
     }
 }

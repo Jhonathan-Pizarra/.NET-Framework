@@ -17,7 +17,8 @@ namespace UI.Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEmpleado());
+            Application.Run(new MDIPrincipal());
+            //Application.Run(new FrmEmpleado());
             //Application.Run(new FrmCliente());
             //Application.Run(new FrmHabitacion());
             //Application.Run(new FrmUsuario());

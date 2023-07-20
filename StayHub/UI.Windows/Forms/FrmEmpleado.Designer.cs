@@ -42,11 +42,11 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.dgvListaEmpleados = new System.Windows.Forms.DataGridView();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,13 +164,6 @@
             this.txtObservaciones.Size = new System.Drawing.Size(498, 22);
             this.txtObservaciones.TabIndex = 13;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(198, 426);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(44, 22);
-            this.txtEstado.TabIndex = 14;
-            // 
             // txtID
             // 
             this.txtID.Enabled = false;
@@ -207,17 +200,28 @@
             this.dgvListaEmpleados.RowTemplate.Height = 24;
             this.dgvListaEmpleados.Size = new System.Drawing.Size(605, 150);
             this.dgvListaEmpleados.TabIndex = 18;
+            this.dgvListaEmpleados.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListaEmpleados_CellMouseDoubleClick);
+            // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Location = new System.Drawing.Point(198, 426);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(94, 20);
+            this.chkEstado.TabIndex = 19;
+            this.chkEstado.Text = "Disponible";
+            this.chkEstado.UseVisualStyleBackColor = true;
             // 
             // FrmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 745);
+            this.Controls.Add(this.chkEstado);
             this.Controls.Add(this.dgvListaEmpleados);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTelefono);
@@ -232,7 +236,9 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).EndInit();
@@ -257,11 +263,11 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtObservaciones;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.DataGridView dgvListaEmpleados;
+        private System.Windows.Forms.CheckBox chkEstado;
     }
 }
 

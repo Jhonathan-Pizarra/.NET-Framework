@@ -42,7 +42,8 @@ namespace UI.Windows.Forms
         {
             txtID.Text = "";
             txtCaracteristica.Text = "";
-            txtEstado.Text = "";
+            //txtEstado.Text = "";
+            chkEstado.Checked = false;
             txtNumero.Text = "";
             txtPiso.Text = "";
             txtPrecio.Text = "";
@@ -63,6 +64,12 @@ namespace UI.Windows.Forms
             }
         }
 
+
+        private void ListarHabitaciones()
+        {
+            dgvHabitacion.DataSource = controllerHabitacion.ListarHabitaciones();
+        }
+
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             viewModelHabitacion = new HabitacionViewModel();
@@ -71,20 +78,31 @@ namespace UI.Windows.Forms
             viewModelHabitacion.Preciodiario_habitacion = double.Parse(txtPrecio.Text);
             viewModelHabitacion.Tipo_habitacion = txtTipo.Text;
             viewModelHabitacion.Caracteristicas_habitacion = txtCaracteristica.Text;
-            viewModelHabitacion.Estado_habitacion = int.Parse(txtEstado.Text);
+            //viewModelHabitacion.Estado_habitacion = int.Parse(txtEstado.Text);
+            viewModelHabitacion.Estado_habitacion = chkEstado.Checked ? 1 : 0;
+
 
             //if para cualquier cosa que necesite controlar
             if (txtID.Text != "")
             {
                 viewModelHabitacion.Id_habitacion = int.Parse(txtID.Text);
                 Actualizar();
+                ListarHabitaciones();
+
             }
             else
             {
                 Insertar();
                 Limpiar();
+                ListarHabitaciones();
+
             }
 
+        }
+
+        private void FrmHabitacion_Load(object sender, EventArgs e)
+        {
+            ListarHabitaciones();
         }
     }
 }

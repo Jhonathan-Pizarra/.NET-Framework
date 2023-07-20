@@ -80,10 +80,13 @@ namespace UI.Windows.AplicationController
                         Id_empleado = item.id_empleado,
                         Nombre_empleado = item.nombre_empleado,
                         Apellido_empleado = item.apellido_empleado,
+                        Direccion_empleado=item.direccion_empleado,
                         Telefono_empleado = item.telefono_empleado,
                         Email_empleado = item.email_empleado,
                         Observaciones_empleado = item.observaciones_empleado,
-                        Estado_empleado = item.estado_empleado
+                        Estado_empleado = item.estado_empleado,
+                        //Mostrar columna de nombre completo (nuevo campo)
+                        Nombre_Completo = item.nombre_empleado + " " + item.apellido_empleado,
                     });
                 }
 
@@ -112,9 +115,13 @@ namespace UI.Windows.AplicationController
                         Nombre_empleado = item.nombre_empleado,
                         Apellido_empleado = item.apellido_empleado,
                         Telefono_empleado = item.telefono_empleado,
+                        Direccion_empleado=item.direccion_empleado,
                         Email_empleado = item.email_empleado,
                         Observaciones_empleado = item.observaciones_empleado,
-                        Estado_empleado = item.estado_empleado
+                        Estado_empleado = item.estado_empleado,
+                        //Agregamos para el combobox
+                        Nombre_Completo = item.nombre_empleado + " " + item.apellido_empleado
+
                     });
                 }
 

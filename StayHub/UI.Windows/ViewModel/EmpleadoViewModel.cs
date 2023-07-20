@@ -16,5 +16,8 @@ namespace UI.Windows.ViewModel
         public string Email_empleado { get; set; }
         public string Observaciones_empleado { get; set; }
         public Nullable<int> Estado_empleado { get; set; }
+
+        //Personalizacion ComboBox
+        public string Nombre_Completo { get; set; }
     }
 }

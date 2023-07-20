@@ -30,3 +30,4 @@ C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.F
 C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmUsuario.resources
 C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmCabeceraReserva.resources
 C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.FrmDetalleReserva.resources
+C:\Users\Jhona\Desktop\ISProject\StayHub\UI.Windows\obj\Debug\UI.Windows.Forms.MDIPrincipal.resources

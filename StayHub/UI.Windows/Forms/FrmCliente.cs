@@ -58,8 +58,15 @@ namespace UI.Windows.Forms
             txtTelefono.Text = "";
             txtEmail.Text = "";
             txtDireccion.Text = "";
-            txtEstado.Text = "";
+            chkEstado.Checked = false;
+            //txtEstado.Text = "";
             txtDNI.Text = "";
+        }
+
+        public void ListarClientes()
+        {
+            dgvClientes.DataSource = controllerCliente.ListarClientes();
+
         }
 
 
@@ -73,20 +80,28 @@ namespace UI.Windows.Forms
             viewModelCliente.Direccion_cliente = txtDireccion.Text;
             viewModelCliente.Telefono_cliente = int.Parse(txtTelefono.Text);
             viewModelCliente.Email_cliente = txtEmail.Text;
-            viewModelCliente.Estado_cliente = int.Parse(txtEstado.Text);
+            //viewModelCliente.Estado_cliente = int.Parse(txtEstado.Text);
+            viewModelCliente.Estado_cliente = chkEstado.Checked ? 1 : 0;
 
             //if para cualquier cosa que necesite controlar
             if (txtID.Text != "")
             {
                 viewModelCliente.Id_cliente = int.Parse(txtID.Text);
                 Actualizar();
+                ListarClientes();
             }
             else
             {
                 Insertar();
                 Limpiar();
+                ListarClientes();
             }
 
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+            ListarClientes();
         }
     }
 }

@@ -40,10 +40,12 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtCaracteristica = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.dgvHabitacion = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -144,13 +146,6 @@
             this.txtCaracteristica.Size = new System.Drawing.Size(148, 22);
             this.txtCaracteristica.TabIndex = 11;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(83, 346);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(148, 22);
-            this.txtEstado.TabIndex = 12;
-            // 
             // btnInsertar
             // 
             this.btnInsertar.Location = new System.Drawing.Point(212, 428);
@@ -178,15 +173,36 @@
             this.txtID.Size = new System.Drawing.Size(31, 22);
             this.txtID.TabIndex = 15;
             // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Location = new System.Drawing.Point(99, 358);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(94, 20);
+            this.chkEstado.TabIndex = 37;
+            this.chkEstado.Text = "Disponible";
+            this.chkEstado.UseVisualStyleBackColor = true;
+            // 
+            // dgvHabitacion
+            // 
+            this.dgvHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHabitacion.Location = new System.Drawing.Point(586, 108);
+            this.dgvHabitacion.Name = "dgvHabitacion";
+            this.dgvHabitacion.RowHeadersWidth = 51;
+            this.dgvHabitacion.RowTemplate.Height = 24;
+            this.dgvHabitacion.Size = new System.Drawing.Size(405, 343);
+            this.dgvHabitacion.TabIndex = 38;
+            // 
             // FrmHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 524);
+            this.ClientSize = new System.Drawing.Size(1042, 524);
+            this.Controls.Add(this.dgvHabitacion);
+            this.Controls.Add(this.chkEstado);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnInsertar);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtCaracteristica);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtPrecio);
@@ -201,6 +217,8 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "FrmHabitacion";
             this.Text = "FrmHabitacion";
+            this.Load += new System.EventHandler(this.FrmHabitacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,9 +238,10 @@
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtCaracteristica;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.CheckBox chkEstado;
+        private System.Windows.Forms.DataGridView dgvHabitacion;
     }
 }
